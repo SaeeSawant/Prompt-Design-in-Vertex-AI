@@ -1,0 +1,67 @@
+{
+  "title": "Cymbal Tagline Generator Template",
+  "description": "",
+  "parameters": {
+    "groundingPromptConfig": {
+      "disabled": true,
+      "groundingConfig": {
+        "sources": [
+          {
+            "type": "WEB"
+          }
+        ]
+      }
+    },
+    "stopSequences": [],
+    "temperature": 1,
+    "tokenLimits": 8192,
+    "topP": 0.95
+  },
+  "systemInstruction": {
+    "parts": [
+      {
+        "text": "Cymbal Direct is partnering with an outdoor gear retailer. They're launching a new line of products designed to encourage young people to explore the outdoors. Help them create catchy taglines for this product line."
+      }
+    ]
+  },
+  "inputPrefixes": [
+    ""
+  ],
+  "outputPrefixes": [
+    ""
+  ],
+  "examples": [
+    {
+      "inputs": [
+        "Write a tagline for a durable backpack designed for hikers that makes them feel prepared. Consider styles like minimalist."
+      ],
+      "outputs": [
+        "Built for the Journey: Your Adventure Essentials."
+      ]
+    },
+    {
+      "inputs": [
+        "Write a tagline for a waterproof tent designed for campers that makes them feel secure. Consider styles like minimalist."
+      ],
+      "outputs": [
+        "Shelter in Every Storm: Ready for Anything."
+      ]
+    }
+  ],
+  "testData": [
+    {
+      "inputs": [
+        "Product Attributes: eco-friendly, breathable\nTarget Audience: nature-loving backpackers\nEmotional Resonance: connected, responsible"
+      ]
+    }
+  ],
+  "type": "freeform",
+  "prompt": {
+    "parts": [
+      {
+        "text": "Generate a tagline for a new outdoor product by Cymbal Direct. The product is {product_attributes}. It's designed for {target_audience}, with the goal of making them feel {emotional_resonance}. Write a short, compelling tagline that aligns with these characteristics."
+      }
+    ]
+  },
+  "model": "gemini-1.5-pro-001"
+}
